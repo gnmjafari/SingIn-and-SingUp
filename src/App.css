@@ -1,0 +1,26 @@
+
+
+body{
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background:#03a9f4;
+    transition: 0.5s;
+}
+body.active{
+    background: #f43648;
+}
+@font-face {
+    font-family: yekan ;
+    src: url(./component/Font/Yekan.ttf);
+}
+
+*{
+    font-family: yekan;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}

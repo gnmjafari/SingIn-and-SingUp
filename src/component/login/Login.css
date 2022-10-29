@@ -1,0 +1,178 @@
+.contianer{
+    position: relative;
+    width: 800px;
+    height: 500px;
+    margin: 20px;
+}
+
+.bluebg{
+    position: absolute;
+    top: 40px;
+    width: 100%;
+    height: 420px;
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 5px 45px rgba(0, 0, 0, 0.15);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bluebg .box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+}
+
+.bluebg .box h2{
+    font-size: 1.2em;
+    font-weight: 500;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.bluebg .box button{
+    cursor: pointer;
+    padding: 10px 20px;
+    border: none;
+    color: #333;
+    background: #fff;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.formbox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background: #fff;
+    z-index: 1000;
+    box-shadow: 0 5px 45px rgba(0, 0, 0, 0.25);
+    transition: 0.5s ease-in-out;
+    overflow: hidden;
+}
+
+.formbox.active{
+    left: 50%;
+}
+
+.formbox .form{
+    position: absolute;
+    left: 0;
+    width: 100%;
+    padding: 50px;
+    transition: 0.5s;
+}
+
+.formbox .singinform{
+    transition-delay: 0.25s;
+}
+
+.formbox.active .singinform{
+    left: -100%;
+    transition-delay: 0s;
+}
+
+.formbox .singupform{
+    left: 100%;
+    transition-delay: 0s;
+}
+
+.formbox.active .singupform{
+    left: 0;
+    transition-delay: 0.25s;
+}
+
+.formbox .form form{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+}
+
+.formbox .form form h3{
+    font-size: 1.5em;
+    font-weight: 500;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.formbox .form form input{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    outline: none;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
+    border: 0;
+}
+
+.formbox .form form input[type="submit"]{
+    background: #03a9f4;
+    color: #fff;
+    border: none;
+    max-width: 100px;
+    cursor: pointer;
+
+}
+
+.formbox.active .singupform input[type="submit"]{
+    background: #f43648;
+}
+
+.formbox .form form .forget{
+    text-decoration: none;
+    color: #333;
+}
+
+
+@media (max-width: 991px)
+{
+    .contianer
+    {
+        max-width: 400px;
+        height: 650px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+    .contianer .bluebg
+    {
+        top: 0;
+        height: 100%;
+
+    }
+    .formbox
+    {
+        width: 100%;
+        height: 500px;
+        top: 0;
+        box-shadow: none;
+    }
+    .bluebg .box
+    {
+        position: absolute;
+        width: 100%;
+        height: 150px;
+        bottom: 0;
+    }
+    .box.singin
+    {
+        top: 0;
+    }
+    .formbox.active
+    {
+        top: 150px;
+        left: 0;
+
+    }
+
+}
